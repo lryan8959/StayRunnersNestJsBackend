@@ -18,7 +18,7 @@ export class CustomersService {
     @InjectModel(RoomRequests.name) private roomRequestModel: Model<RoomRequests>,
     @InjectModel(City.name) private cityModel: Model<City>,
     private emailService: EmailService,
-  ) {}
+  ) { }
 
   async createBid(createBidDto: CreateBidDto) {
     const { city } = createBidDto;
@@ -49,15 +49,17 @@ export class CustomersService {
       CustomerName = customer.name;
     }
 
-    const { beds, people, nights, price_willing_to_pay, special_instructions } =
+    const { payment_method, price_willing_to_pay, special_instructions, what_you_need,delivery_address,} =
       createBidDto;
     const createdBid = new this.bidModel({
       customer: _id,
-      beds,
-      people,
-      nights,
+
+    
       price_willing_to_pay,
       special_instructions,
+      what_you_need,
+      delivery_address,
+      payment_method,
     });
     const savedBid = await createdBid.save();
 
@@ -96,9 +98,10 @@ export class CustomersService {
                     <ul>
                         <li><strong>Name:</strong> ${CustomerName}</li>
                         <li><strong>City:</strong> ${findCity.city_name}</li>
-                        <li><strong>Beds:</strong> ${beds}</li>
-                        <li><strong>People:</strong> ${people}</li>
-                        <li><strong>Nights:</strong> ${nights}</li>
+                         <li><strong>What Do You Need:</strong> ${what_you_need}</li>
+                         <li><strong>Complete Address:</strong> ${delivery_address}</li>
+                           <li><strong>Complete Address:</strong> ${payment_method}</li>
+                       
                         <li><strong>Special Instructions:</strong> ${special_instructions}</li>
                     </ul>
                     <a href="https://m59media.com/negotiate?id=${savedBid._id}" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: #ffffff; text-decoration: none;">Negotiate Room Stay</a>

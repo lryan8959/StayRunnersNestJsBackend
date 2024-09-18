@@ -39,7 +39,6 @@ export class RoomsService {
     room.payment_option = updateRoomDto.payment_option;
     room.min_price_per_night = updateRoomDto.min_price_per_night;
     room.city = updateRoomDto.city;
-    room.billing = updateRoomDto.billing;
     room.updated_at = new Date();
 
     const updated = await room.save();

@@ -23,7 +23,5 @@ export class UpdateRoomDto {
     @IsString()
     city: City;
 
-    @IsNotEmpty()
-    @IsString()
-    billing: string;
+  
 }

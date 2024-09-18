@@ -44,16 +44,16 @@ import { chatResponseModule } from './chatResponse/chatResonse.module';
     }),
     MailerModule.forRoot({
       transport: {
-        host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
+        host: 'smtp.gmail.com', // Gmail SMTP server
+        port: 587,
         secure: false, // Set to true if using TLS/SSL
         auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
+          user: 'lryan8959@gmail.com',
+          pass:'nzia qdfb cdmv wfpi',
         },
       },
       defaults: {
-        from: process.env.SMTP_EMAIL, // Default sender email address
+        from: 'lryan8959@gmail.com', // Default sender email address
       },
     }),
     // CacheRedisModule,

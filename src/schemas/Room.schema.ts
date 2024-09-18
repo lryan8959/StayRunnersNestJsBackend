@@ -26,8 +26,6 @@ export class Room {
     @Prop({ required: true, type: mongoose.Schema.Types.ObjectId, ref: 'City' })
     city: City;
 
-    @Prop({ required: true })
-    billing: string;
 
     @Prop({ required: true, default: false })
     deleted: boolean;

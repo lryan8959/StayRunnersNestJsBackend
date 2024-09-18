@@ -20,7 +20,5 @@ export class CreateRoomDto {
     @IsString()
     city: string;
 
-    @IsNotEmpty()
-    @IsString()
-    billing: string;
+  
 }

@@ -7,20 +7,23 @@ export class Bid {
   @Prop({ required: true, type: mongoose.Schema.Types.ObjectId, ref: 'Customer' })
   customer: Customer;
 
-  @Prop({ required: true })
-  beds: number;
 
-  @Prop({ required: true })
-  people: number;
 
-  @Prop({ required: true })
-  nights: number;
+ 
 
   @Prop({ required: true })
   price_willing_to_pay: number;
 
   @Prop()
   special_instructions: string;
+
+  @Prop()
+  what_you_need: string;
+
+  @Prop()
+  delivery_address: string;
+  @Prop()
+  payment_method: string;
 
   @Prop({ enum: ['active', 'pending', 'cancelled', 'completed'], default: 'active' })
   bid_status: string;
