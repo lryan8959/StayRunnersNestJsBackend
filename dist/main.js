@@ -9,7 +9,7 @@ async function bootstrap() {
         origin: '*',
     });
     app.useGlobalPipes(new common_1.ValidationPipe());
-    await app.listen(4000);
+    await app.listen(5000);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map
