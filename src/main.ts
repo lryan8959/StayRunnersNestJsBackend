@@ -35,6 +35,6 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   // Start the server on port 5000
-  await app.listen(5000);
+  await app.listen(6000, '0.0.0.0');
 }
 bootstrap();
