@@ -240,7 +240,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ChatGateway.prototype, "handleMessage", null);
 exports.ChatGateway = ChatGateway = __decorate([
-    (0, websockets_1.WebSocketGateway)(4000, {
+    (0, websockets_1.WebSocketGateway)(5050, {
         cors: true
     })
 ], ChatGateway);
