@@ -113,7 +113,7 @@ const getGroqChatCompletion = async (messages) => {
   });
 };
 
-@WebSocketGateway(4000, {
+@WebSocketGateway(5050, {
 
  cors: true 
 
